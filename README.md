@@ -1,7 +1,6 @@
 # 💤 LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+My personal [LazyVim](https://github.com/LazyVim/LazyVim) configuration.
 
 ---
 
@@ -39,9 +38,7 @@ scoop bucket add nerd-fonts
 scoop install CascadiaCode-NF
 ```
 
-### 3. Install LazyVim
-
-Follow the steps from the [official LazyVim installation docs](https://www.lazyvim.org/installation):
+### 3. Clone this config
 
 - **Back up** your current Neovim files (if any):
 
@@ -53,16 +50,10 @@ Follow the steps from the [official LazyVim installation docs](https://www.lazyv
   Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
   ```
 
-- **Clone** the LazyVim starter into your Neovim config folder:
+- **Clone** this repo into your Neovim config folder:
 
   ```powershell
-  git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
-  ```
-
-- **Remove** the `.git` folder so you can add it to your own repo later:
-
-  ```powershell
-  Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+  git clone https://github.com/Ferre-Laridon/nvim $env:LOCALAPPDATA\nvim
   ```
 
 - **Start Neovim!**
