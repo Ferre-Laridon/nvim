@@ -63,6 +63,83 @@ brew install --cask font-caskaydia-cove-nerd-font
 
 ---
 
+## 🐧 Linux Installation
+
+### 1. Install Required Packages
+
+Use the package manager for your distribution:
+
+**Debian / Ubuntu**
+
+```bash
+sudo apt install git neovim gcc ripgrep fd-find curl lazygit
+```
+
+> [!NOTE]
+> On Debian/Ubuntu, `fd` is packaged as `fd-find`. To use it as `fd`, create a persistent symlink:
+> ```bash
+> sudo ln -s $(which fdfind) /usr/local/bin/fd
+> ```
+
+**Arch Linux**
+
+```bash
+sudo pacman -S git neovim gcc ripgrep fd curl lazygit
+```
+
+**Fedora**
+
+```bash
+sudo dnf install git neovim gcc ripgrep fd-find curl lazygit
+```
+
+#### Optional but recommended
+
+Install a [Nerd Font](https://www.nerdfonts.com/) (v3.0 or greater) for proper icon display.
+Example using [CascadiaCode](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode):
+
+```bash
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+curl -fLO "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.tar.xz"
+tar -xf CascadiaCode.tar.xz
+fc-cache -fv
+```
+
+### 2. Clone this config
+
+- **Back up** your current Neovim files (if any):
+
+  ```bash
+  # required
+  mv ~/.config/nvim ~/.config/nvim.bak
+
+  # optional but recommended
+  mv ~/.local/share/nvim ~/.local/share/nvim.bak
+  mv ~/.local/state/nvim ~/.local/state/nvim.bak
+  mv ~/.cache/nvim ~/.cache/nvim.bak
+  ```
+
+- **Clone** this repo into your Neovim config folder:
+
+  ```bash
+  git clone https://github.com/Ferre-Laridon/nvim ~/.config/nvim
+  ```
+
+- **Start Neovim!**
+
+  ```bash
+  nvim
+  ```
+
+  LazyVim will automatically install all plugins on the first run.
+
+> [!TIP]
+> It is recommended to run `:LazyHealth` after installation.
+> This will load all plugins and check if everything is working correctly.
+
+---
+
 ## 🪟 Windows Installation
 
 ### 1. Install Scoop
